@@ -8,6 +8,8 @@ plugins {
 }
 
 dependencies {
+    implementation(libs.koog.agents)
+    implementation(libs.koog.agents.ext)
     implementation(libs.slf4j.api)
     implementation(libs.slf4j.simple)
 }

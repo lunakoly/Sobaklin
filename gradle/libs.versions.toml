@@ -8,6 +8,8 @@ kotlinxDatetime = "0.8.0"
 kotlinxSerializationJSON = "1.11.0"
 kotlinxCoroutines = "1.10.2"
 slf4j = "2.0.16"
+koog = "1.0.0"
+koog-ext = "0.8.0"
 
 [libraries]
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -16,6 +18,8 @@ kotlinxSerialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-j
 kotlinxCoroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
 slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
 slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
+koog-agents = { module = "ai.koog:koog-agents", version.ref = "koog" }
+koog-agents-ext = { module = "ai.koog:agents-ext", version.ref = "koog-ext" }
 
 # Libraries can be bundled together for easier import
 [bundles]
