@@ -10,6 +10,7 @@ kotlinxCoroutines = "1.10.2"
 slf4j = "2.0.16"
 koog = "1.0.0"
 koog-ext = "0.8.0"
+asm = "9.7.1"
 
 [libraries]
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -20,6 +21,12 @@ slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
 slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
 koog-agents = { module = "ai.koog:koog-agents", version.ref = "koog" }
 koog-agents-ext = { module = "ai.koog:agents-ext", version.ref = "koog-ext" }
+asm = { module = "org.ow2.asm:asm", version.ref = "asm" }
+asm-util = { module = "org.ow2.asm:asm-util", version.ref = "asm" }
+asm-tree = { module = "org.ow2.asm:asm-tree", version.ref = "asm" }
+asm-analysis = { module = "org.ow2.asm:asm-analysis", version.ref = "asm" }
+prompt-executor-openai-client = { module = "ai.koog:prompt-executor-openai-client", version.ref = "koog" }
+agents-features-memory = { module = "ai.koog:agents-features-memory", version.ref = "koog" }
 
 # Libraries can be bundled together for easier import
 [bundles]
