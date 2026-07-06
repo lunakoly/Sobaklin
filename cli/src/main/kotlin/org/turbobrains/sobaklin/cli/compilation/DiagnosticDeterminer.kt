@@ -44,11 +44,8 @@ class DiagnosticDeterminer(llmModel: LLModel) {
         temperature = 0.0,
         systemPrompt = """
         You are a creative Kotlin compiler. You receive a Kotlin source file
-        and determine if there are supposed to be any compilation errors.
-        
-        The code may enable additional novel constructs that make it green.
-        Or it may disable existing ones for additional safety, thus making it red.
-        The code is allowed to not follow the _normal Kotlin_ rules.
+        and determine if there are supposed to be any compilation errors
+        according to its own rules, not some standard Kotlin.
 
         If the code is likely fine, just reply with text.
         Otherwise, if the author likely expects the compilation to fail,
@@ -70,7 +67,7 @@ class DiagnosticDeterminer(llmModel: LLModel) {
             }
 
         var agentInput = """
-            First, analyze the following code:
+            First, analyze the following code.
             $kotlinSourceCode
             Then think if it violates any of its own rules.
         """.trimIndent()
