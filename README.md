@@ -1,4 +1,4 @@
-# Kotlin K3 Compiler (aka Sobaklin)
+# Kotlin K9 Compiler (aka Sobaklin)
 
 An AI-powered drop-in replacement for `kotlinc`, the compiler for Kotlin programming language.
 
