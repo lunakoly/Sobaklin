@@ -81,13 +81,17 @@ tasks.register<Copy>("dist") {
         into(".")
     }
 
+    val enableLogging = when {
+        localProperties.getProperty("sobaklin.enableLogging") == "true" -> ""
+        else -> "# "
+    }
     from(resources.text.fromString(
         $$"""
         #!/bin/bash
 
         script_full_path=$(dirname "$0")
 
-        # logging="-Dorg.slf4j.simpleLogger.defaultLogLevel=info"
+        $${enableLogging}logging="-Dorg.slf4j.simpleLogger.defaultLogLevel=info"
 
         java $logging -Dsobaklin.kotlin.runtime="$script_full_path/kotlin" -jar "$script_full_path/cli.jar" "$@"
         """.trimIndent()
